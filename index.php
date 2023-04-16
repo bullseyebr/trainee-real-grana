@@ -1,3 +1,37 @@
+<?php
+
+/*
+    PHP é renderização no servidor
+    assim, ele renderiza toda a página no servidor antes de enviar pro cliente
+    e o php nao executa nenhum código no cliente
+    executar código no cliente, quem faz é o JS
+*/
+
+// $private_key = '9a8sd090a8sd2kj9ujsjdj';
+$private_key = '9a8sd090a8sd2kj9ujsjdj';
+
+function imprimeChavePublica($private_key) {
+    if($private_key == '9a8sd090a8sd2kj9ujsjdj')
+        return 'Chave Pública: ' . $private_key;
+    return false;
+}
+
+$public_key = imprimeChavePublica($private_key);
+
+echo 'Chave pública: ' . $public_key;
+print_r($public_key);
+
+$array = array("Volvo", "BMW", "Toyota");
+
+// echo nao consegue imprimir array, apenas variavel normal primitiva
+// echo $array;
+
+// pra imprimir array, usar print_r
+// print_r($array);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -55,9 +89,9 @@
     <main class="container">
         <section>
             <div class="jumbotron">
-                <h1 class="display-4">Hello, world!</h1>
-                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
-                    attention to featured content or information.</p>
+                <h1 class="display-4">Hello, world! Welcome!</h1>
+                <p class="lead">Sua chave pública é: <?= $public_key ?></p>
+                <p class="lead">Outra forma de imprimir na tela com echo: <?php echo $public_key ?></p>
                 <hr class="my-4">
                 <p>It uses utility classes for typography and spacing to space content out within the larger container.
                 </p>
