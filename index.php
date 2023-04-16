@@ -13,7 +13,7 @@
     <title>Home</title>
 </head>
 
-<body>
+<body id="main-container">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark navbar-style">
         <div class="container">
             <a class="navbar-brand" href="#">Navbar</a>
@@ -61,7 +61,8 @@
                 <hr class="my-4">
                 <p>It uses utility classes for typography and spacing to space content out within the larger container.
                 </p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                <a class="btn btn-success btn-lg" href="#" role="button">Ativa estilo diferenciado</a>
+                <a id="btnRemoveStyle"class="btn btn-secondary btn-lg" href="#" role="button">Desativa estilos do Body</a>
             </div>
         </section>
         <section>
@@ -135,7 +136,7 @@
                     </div>
                 </div>
                 <div class="card col-lg-4 col-md-6 col-12 m-2 shadow-lg" style="width: 18rem;">
-                    <img class="card-img-top" src=".https://picsum.photos/700/300?v=6" alt="Card image cap">
+                    <img class="card-img-top" src="https://picsum.photos/700/300?v=6" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk
@@ -220,7 +221,7 @@
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> </script>
 
     <!-- bibliotecas para o booststrap funcionar -->
     <!-- popper: biblioteca requerida pelo boostrap para funcionalidades dos tooltips e popovers -->
@@ -253,6 +254,34 @@
         }
 
         imprimeTextoComNumeroMoedaReal('Vende-se escultura: os pratos lamentaram os tigres tristes:', 98)
+
+        // vai escutar o button
+        btnActiveNewStyleBody = document.querySelector('#main-container > main > section:nth-child(1) > div > a')
+        btnActiveNewStyleBody.addEventListener("click", changeBackgroundColor)
+
+        function changeBackgroundColor(color = '#F00') {
+            document.getElementById("main-container").classList += " bg-danger"
+            document.getElementById("main-container").classList.toggle("text-warning")
+            console.log('Entrou!!')
+        }
+
+
+        $(document).ready(function() {
+            console.log($(".card"))
+
+            $(".card .btn").click(function() {
+                event.preventDefault()
+                console.log($(this).parents()[1])
+                $(this).parents()[1].classList.add('d-none');
+            });
+        });
+
+        $(document).ready(function() {
+            $("#btnRemoveStyle").click(function() {
+                $('#main-container').removeClass()
+                console.log('FOI! Remove classes.')
+            });
+        });
     </script>
 </body>
 
