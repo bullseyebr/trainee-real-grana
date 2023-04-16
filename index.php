@@ -1,5 +1,11 @@
 <?php
 
+include_once('helpers/string.php');
+
+echo 'Teste 1: ' .
+contains('oi', 'oi minha gente') . ' Teste 2: ' .
+contains('oi', 'olá pessoal');
+
 /*
     PHP é renderização no servidor
     assim, ele renderiza toda a página no servidor antes de enviar pro cliente
@@ -28,6 +34,8 @@ $array = array("Volvo", "BMW", "Toyota");
 
 // pra imprimir array, usar print_r
 // print_r($array);
+
+
 
 
 ?>
