@@ -24,10 +24,19 @@ function imprimeChavePublica($private_key) {
 
 $public_key = imprimeChavePublica($private_key);
 
-echo 'Chave pública: ' . $public_key;
-print_r($public_key);
+
+
+
+
 
 $array = array("Volvo", "BMW", "Toyota");
+
+
+// debugar seu código para saber o valor das variaveis e o que está acontecendo
+// echo 'Chave pública: ' . $public_key;
+// print_r($public_key);
+// var_dump($array);
+
 
 // echo nao consegue imprimir array, apenas variavel normal primitiva
 // echo $array;
