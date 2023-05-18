@@ -29,7 +29,10 @@ $array = array("Volvo", "BMW", "Toyota");
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<?php include('../include/head.php'); ?>
+<?php
+    $pageName = 'Portal';
+    include('../include/head.php');
+?>
 
 <body id="main-container">
     <?php include('../include/header.php'); ?>
