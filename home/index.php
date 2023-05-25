@@ -22,9 +22,7 @@ $array = array("Volvo", "BMW", "Toyota");
 // print_r($array);
 
 
-$pageName = 'Home';
-$slogan = 'Perdedor não é quem tenta e falha, é quem nem tenta.';
-include('../include/head.php');
+
 
 session_start();
 
@@ -36,10 +34,15 @@ $_SESSION['idade'] = 84;
 
 // print_r($_SESSION);
 
+$pageName = 'Home';
+$slogan = 'Perdedor não é quem tenta e falha, é quem nem tenta.';
+include('../include/head.php');
+
+include('../include/header.php');
+
 ?>
 
 
-<?php include('../include/header.php'); ?>
 <main class="container">
     <!-- abertura de php para imprimir, usando <\?php e <\?= são equivalentes -->
 

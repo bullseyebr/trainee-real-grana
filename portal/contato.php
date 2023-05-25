@@ -38,6 +38,7 @@ include('../include/head.php');
 ?>
 
 <?php include('../include/header.php'); ?>
+
 <main class="container">
     <h1>Contato</h1>
     <h4>Olá <?= $_SESSION['username']; ?></h4>

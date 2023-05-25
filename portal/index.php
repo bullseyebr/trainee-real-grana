@@ -42,7 +42,6 @@ $_SESSION['idade'] = 84;
 <?php include('../include/header.php'); ?>
 <main class="container">
     <!-- abertura de php para imprimir, usando <\?php e <\?= são equivalentes -->
-
     <h1 class="mt-2"><?= $pageName ?></h1>
     <h4>Olá <?= $_SESSION['username']; ?></h4>
     <h6><?php echo $slogan; ?></h6>
