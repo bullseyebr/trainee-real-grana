@@ -17,7 +17,7 @@ var_dump($_COOKIE );
 echo '<br><br><br>---------------------------------------------';
 
 echo 'ENV<br><br>';
-var_dump($_ENV  );
+var_dump($_ENV);
 echo '<br><br><br>---------------------------------------------';
 
 echo 'REQUEST<br><br>';

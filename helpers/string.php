@@ -31,6 +31,10 @@
     * @return bool
     * True if $needle is found, false otherwise.
     */
+
+
+// needle = agulha
+// haystack = palheiro
 function contains($needle, $haystack)
 {
     foreach ((array)$needle as $ndl) {
