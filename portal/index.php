@@ -23,14 +23,30 @@ $array = array("Volvo", "BMW", "Toyota");
 
 
 $pageName = 'Home';
+$slogan = 'Perdedor não é quem tenta e falha, é quem nem tenta.';
 include('../include/head.php');
+
+session_start();
+
+$_SESSION['Logado'] = 'Verdadeiro';
+
+$_SESSION['username'] = 'Vinicius Leo do Leo';
+$_SESSION['idade'] = 84;
+
+
+// print_r($_SESSION);
 
 ?>
 
 
 <?php include('../include/header.php'); ?>
 <main class="container">
-    <section>
+    <!-- abertura de php para imprimir, usando <\?php e <\?= são equivalentes -->
+
+    <h1 class="mt-2"><?= $pageName ?></h1>
+    <h4>Olá <?= $_SESSION['username']; ?></h4>
+    <h6><?php echo $slogan; ?></h6>
+    <section class="mt-5">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero impedit quo repellendus veritatis dolorum tempora nobis alias nostrum ea sunt incidunt nemo libero fugit fuga, beatae ducimus pariatur voluptatibus id.</p>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero impedit quo repellendus veritatis dolorum tempora nobis alias nostrum ea sunt incidunt nemo libero fugit fuga, beatae ducimus pariatur voluptatibus id.</p>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero impedit quo repellendus veritatis dolorum tempora nobis alias nostrum ea sunt incidunt nemo libero fugit fuga, beatae ducimus pariatur voluptatibus id.</p>

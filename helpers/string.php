@@ -45,4 +45,3 @@ function contains($needle, $haystack)
 
     return false;
 }
-?>
